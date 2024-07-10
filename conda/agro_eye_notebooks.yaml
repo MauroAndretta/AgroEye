@@ -1,6 +1,7 @@
 name: agro_eye_notebooks
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - bzip2=1.0.8
   - ca-certificates=2024.3.11
@@ -17,3 +18,9 @@ dependencies:
   - wheel=0.43.0
   - xz=5.4.6
   - zlib=1.2.13
+  - pip:
+    - openmeteo-requests
+    - requests-cache 
+    - retry-requests 
+    - numpy 
+    - pandas
