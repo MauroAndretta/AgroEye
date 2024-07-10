@@ -1,5 +1,6 @@
 name: agro_eye_notebooks
 channels:
+  - anaconda
   - defaults
   - conda-forge
 dependencies:
@@ -19,8 +20,12 @@ dependencies:
   - xz=5.4.6
   - zlib=1.2.13
   - pip:
+    - numpy 
+    - pandas
+    - requests
+    - python-dotenv
+    # packages for fecthing data from openmeteo
     - openmeteo-requests
     - requests-cache 
     - retry-requests 
-    - numpy 
-    - pandas
+
