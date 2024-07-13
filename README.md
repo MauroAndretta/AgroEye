@@ -40,6 +40,15 @@ The following plot displays the daily min and max temperature, humidity, wind sp
 
 <img src="images/weather_forecast_daily.png" width="600" alt="Hourly Weather Information">
 
+
+## Calculate NDVI from Sentinel-2 with Python API
+
+The Normalized Difference Vegetation Index (NDVI) is a simple graphical indicator that can be used to analyze remote sensing measurements, typically, but not necessarily, from a space platform, and assess whether the target being observed contains live green vegetation or not.
+
+NDVI value ranges between -1.0 and +1.0. Generally speaking, NDVI shows a functional relationship with vegetation properties (e.g. biomass). NDVI is directly related to the photosynthetic capacity and energy absorption of plant canopies. The NDVI is calculated from these individual measurements as follows:
+
+`NDVI= (NIR-Red) \ (NIR+Red)`
+ 
  
 ## Contacts
 **Build:** (mauo.andretta222@gmail.com)

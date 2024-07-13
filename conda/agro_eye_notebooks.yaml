@@ -11,6 +11,7 @@ dependencies:
   - pip:
     - numpy 
     - requests
+    - ipykernel
     # packages for fecthing data from openmeteo
     - openmeteo-requests
     - requests-cache 
@@ -18,4 +19,5 @@ dependencies:
     - matplotlib
     - plotly
     - nbformat
+    - earthengine-api
 
