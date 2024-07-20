@@ -31,14 +31,14 @@ Currently, we obtain historical weather information for two specified dates. Thi
 
 The following plot displays the hourly temperature, humidity, wind speed and total precipitation from the specified dates:
 
-<img src="images/weather_forecast_hourly.png" width="600" alt="Hourly Weather Information">
+<img src="images/weather_forecast_hourly.png" width="400" alt="Hourly Weather Information">
 
 
 #### Hourly Weather Information Plot
 
 The following plot displays the daily min and max temperature, humidity, wind speed and total precipitation from the specified dates:
 
-<img src="images/weather_forecast_daily.png" width="600" alt="Hourly Weather Information">
+<img src="images/weather_forecast_daily.png" width="400" alt="Hourly Weather Information">
 
 
 ## Calculate Crop Metrics from Sentinel-2 Images with Python API
@@ -78,7 +78,8 @@ NDVI value ranges between -1.0 and +1.0. Generally speaking, NDVI shows a functi
 
 The figure below show an example of NDVI index, computed for the Polygon of interest. 
 
-![Capture Polygon](./images/NDVI_Crop.PNG)
+<img src="./images/NDVI_Crop.PNG" alt="Capture Polygon" width="400">
+
  
 ## Contacts
 **Build:** (mauo.andretta222@gmail.com)
