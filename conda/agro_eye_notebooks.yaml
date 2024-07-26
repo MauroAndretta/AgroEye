@@ -6,11 +6,12 @@ channels:
 dependencies:
   - python=3.11
   - python-dotenv
-  - pandas
   - pip
   - pip:
     - numpy 
+    - pandas
     - requests
+    - ipykernel
     # packages for fecthing data from openmeteo
     - openmeteo-requests
     - requests-cache 
@@ -18,4 +19,7 @@ dependencies:
     - matplotlib
     - plotly
     - nbformat
+    - earthengine-api
+    - geemap
+    - geopy
 
