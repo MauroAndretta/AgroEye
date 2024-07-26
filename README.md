@@ -8,6 +8,7 @@ AgroEye is an innovative project focused on leveraging computer vision technolog
     ├── `conda`: conda environments
     ├── `images`: All the images, if any
     ├── `notebooks`: All notebooks such as Jupyter notebooks, if any
+    ├── `papers`: All the papers used to conduct the crop analysis
     ├── `src`: Python code for the app
     ├── `tests`: performance, unit and end-to-end tests
     ├── `.gitignore`
@@ -67,19 +68,74 @@ except Exception as e:
     print(f"Error: {e}")
 ```
 
-With the images correclty acquired (filtered by the `"CLOUDY_PIXEL_PERCENTAGE"`, in order to keep only noiseless information), is it possible to compute to compute all the crop metrics. 
+With the images correclty acquired (filtered by the `"CLOUDY_PIXEL_PERCENTAGE"`, in order to keep only noiseless information), is it possible to compute to compute all the crop metrics.
 
-### NDVI
-The Normalized Difference Vegetation Index (NDVI) is a simple graphical indicator that can be used to analyze remote sensing measurements, typically, but not necessarily, from a space platform, and assess whether the target being observed contains live green vegetation or not.
 
-NDVI value ranges between -1.0 and +1.0. Generally speaking, NDVI shows a functional relationship with vegetation properties (e.g. biomass). NDVI is directly related to the photosynthetic capacity and energy absorption of plant canopies. The NDVI is calculated from these individual measurements as follows:
 
-`NDVI= (NIR-Red) \ (NIR+Red)`
+# Vegetation Indices for Sentinel-2 Imagery Analysis
+
+These indices are categorized based on what they calculate:
+
+## 1. Vigorous Index
+
+### Normalized Difference Vegetation Index (NDVI)
+**Description:** NDVI is used to measure and monitor plant growth, vegetation cover, and biomass production.
+**Formula:**
+$$ \text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}} $$
+**Bands Used:** NIR (B8), Red (B4)
 
 The figure below show an example of NDVI index, computed for the Polygon of interest. 
 
 <img src="./images/NDVI_Crop.PNG" alt="Capture Polygon" width="400">
 
+### Green Normalized Difference Vegetation Index (GNDVI)
+**Description:** GNDVI is used to assess vegetation health, similar to NDVI, but uses the green band instead of the red band.
+**Formula:**
+$$ \text{GNDVI} = \frac{\text{NIR} - \text{Green}}{\text{NIR} + \text{Green}} $$
+**Bands Used:** NIR (B8), Green (B3)
+
+### Optimized Soil Adjusted Vegetation Index (OSAVI)
+**Description:** OSAVI is an optimized version of SAVI designed to minimize soil brightness influences in areas of sparse vegetation.
+**Formula:**
+$$ \text{OSAVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red} + 0.16} $$
+**Bands Used:** NIR (B8), Red (B4)
+
+### Enhanced Vegetation Index (EVI)
+**Description:** EVI is designed to enhance the vegetation signal with improved sensitivity in high biomass regions and better vegetation monitoring by minimizing soil and atmospheric influences.
+**Formula:**
+$$ \text{EVI} = 2.5 \times \frac{\text{NIR} - \text{Red}}{\text{NIR} + 6 \times \text{Red} - 7.5 \times \text{Blue} + 1} $$
+**Bands Used:** NIR (B8), Red (B4), Blue (B2)
+
+## 2. Water Stress Index
+
+### Normalized Difference Water Index (NDWI)
+**Description:** NDWI is used to monitor changes in water content of leaves and to identify water bodies.
+**Formula:**
+$$ \text{NDWI} = \frac{\text{Green} - \text{NIR}}{\text{Green} + \text{NIR}} $$
+**Bands Used:** Green (B3), NIR (B8)
+
+## 3. Chlorophyll Level
+
+### Normalized Difference Red Edge Index (NDRE)
+**Description:** NDRE is used to measure the plant chlorophyll content, differentiating between healthy and stressed vegetation.
+**Formula:**
+$$ \text{NDRE} = \frac{\text{NIR} - \text{Red Edge}}{\text{NIR} + \text{Red Edge}} $$
+**Bands Used:** NIR (B8), Red Edge (B5)
+
+## 4. Nitrogen Stress
+
+### Triangular Vegetation Index (TVI)
+**Description:** TVI measures the area of a hypothetical triangle formed by the green peak, red minimum reflectance, and near-infrared shoulder. It is sensitive to leaf chlorophyll content and can be used for nitrogen stress detection in plants.
+**Formula:**
+$$ \text{TVI} = 0.5 \times [120 \times (NIR - G)-200 \times (R-G)] $$
+
+
+## Interactivity and Visualization
+AgroEye provides an interactive web application that allows users to select two dates and interact with a geemap.Map object. The application includes various checkboxes and a date slider, giving users the ability to conduct crop analysis using the defined vegetation indices.
+
+The figure below show an example of the Map showed to the users. With the NDWI index activated, computed for the Polygon of interest for the date **2024-06-28**.
+
+<img src="./images/Visualization_Map.PNG" alt="Capture Polygon" width="400">
  
 ## Contacts
 **Build:** (mauo.andretta222@gmail.com)
