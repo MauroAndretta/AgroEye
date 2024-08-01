@@ -81,7 +81,9 @@ These indices are categorized based on what they calculate:
 ### Normalized Difference Vegetation Index (NDVI)
 **Description:** NDVI is used to measure and monitor plant growth, vegetation cover, and biomass production.
 **Formula:**
+
 $$\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$$
+
 **Bands Used:** NIR (B8), Red (B4)
 
 The figure below show an example of NDVI index, computed for the Polygon of interest. 
@@ -91,19 +93,25 @@ The figure below show an example of NDVI index, computed for the Polygon of inte
 ### Green Normalized Difference Vegetation Index (GNDVI)
 **Description:** GNDVI is used to assess vegetation health, similar to NDVI, but uses the green band instead of the red band.
 **Formula:**
-$$\text{GNDVI} = \frac{\text{NIR} - \text{Green}}{\text{NIR} + \text{Green}}$$
+
+$\text{GNDVI} = \frac{\text{NIR} - \text{Green}}{\text{NIR} + \text{Green}}$
+
 **Bands Used:** NIR (B8), Green (B3)
 
 ### Optimized Soil Adjusted Vegetation Index (OSAVI)
 **Description:** OSAVI is an optimized version of SAVI designed to minimize soil brightness influences in areas of sparse vegetation.
 **Formula:**
+
 $$\text{OSAVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red} + 0.16}$$
+
 **Bands Used:** NIR (B8), Red (B4)
 
 ### Enhanced Vegetation Index (EVI)
 **Description:** EVI is designed to enhance the vegetation signal with improved sensitivity in high biomass regions and better vegetation monitoring by minimizing soil and atmospheric influences.
 **Formula:**
+
 $$\text{EVI} = 2.5 \times \frac{\text{NIR} - \text{Red}}{\text{NIR} + 6 \times \text{Red} - 7.5 \times \text{Blue} + 1}$$
+
 **Bands Used:** NIR (B8), Red (B4), Blue (B2)
 
 ## 2. Water Stress Index
@@ -111,7 +119,9 @@ $$\text{EVI} = 2.5 \times \frac{\text{NIR} - \text{Red}}{\text{NIR} + 6 \times \
 ### Normalized Difference Water Index (NDWI)
 **Description:** NDWI is used to monitor changes in water content of leaves and to identify water bodies.
 **Formula:**
+
 $$\text{NDWI} = \frac{\text{Green} - \text{NIR}}{\text{Green} + \text{NIR}}$$
+
 **Bands Used:** Green (B3), NIR (B8)
 
 ## 3. Chlorophyll Level
@@ -119,7 +129,9 @@ $$\text{NDWI} = \frac{\text{Green} - \text{NIR}}{\text{Green} + \text{NIR}}$$
 ### Normalized Difference Red Edge Index (NDRE)
 **Description:** NDRE is used to measure the plant chlorophyll content, differentiating between healthy and stressed vegetation.
 **Formula:**
+
 $$\text{NDRE} = \frac{\text{NIR} - \text{Red Edge}}{\text{NIR} + \text{Red Edge}}$$
+
 **Bands Used:** NIR (B8), Red Edge (B5)
 
 ## 4. Nitrogen Stress
@@ -127,6 +139,7 @@ $$\text{NDRE} = \frac{\text{NIR} - \text{Red Edge}}{\text{NIR} + \text{Red Edge}
 ### Triangular Vegetation Index (TVI)
 **Description:** TVI measures the area of a hypothetical triangle formed by the green peak, red minimum reflectance, and near-infrared shoulder. It is sensitive to leaf chlorophyll content and can be used for nitrogen stress detection in plants.
 **Formula:**
+
 $$\text{TVI} = 0.5 \times [120 \times (NIR - G)-200 \times (R-G)]$$
 
 
