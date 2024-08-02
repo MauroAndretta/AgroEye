@@ -6,6 +6,7 @@ AgroEye is an innovative project focused on leveraging computer vision technolog
 ```
 └── `AgroEye`
     ├── `conda`: conda environments
+    ├── `data`: All the dataset used
     ├── `images`: All the images, if any
     ├── `notebooks`: All notebooks such as Jupyter notebooks, if any
     ├── `papers`: All the papers used to conduct the crop analysis
