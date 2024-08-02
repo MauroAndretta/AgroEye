@@ -94,7 +94,7 @@ The figure below show an example of NDVI index, computed for the Polygon of inte
 **Description:** GNDVI is used to assess vegetation health, similar to NDVI, but uses the green band instead of the red band.
 **Formula:**
 
-$\text{GNDVI} = \frac{\text{NIR} - \text{Green}}{\text{NIR} + \text{Green}}$
+$$\text{GNDVI} = \frac{\text{NIR} - \text{Green}}{\text{NIR} + \text{Green}}$$
 
 **Bands Used:** NIR (B8), Green (B3)
 
